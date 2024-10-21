@@ -1,0 +1,21 @@
+{
+    "name": "TFIO-Dev",
+    "build": {"dockerfile": "Dockerfile",
+               "options": ["--tag=tfio_dev-vscode:local"]},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-toolsai.jupyter",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+    "mounts": [{"source": "${localEnv:HOME}/Data/",
+                "target": "/workspaces/data",
+                "type": "bind"}],
+    "remoteUser": "vscode",
+    "updateRemoteUserUID": true,
+    "runArgs": ["--rm", "--runtime=nvidia", "--gpus", "all"]  
+}

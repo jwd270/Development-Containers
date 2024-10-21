@@ -1,0 +1,2 @@
+# Devcontainer for SNN Torch development
+This devcontainer is setup for developing spiking neural networks using SNN torch.  Additoinal libraries have been added to enable audo processing for an audio dataset.
