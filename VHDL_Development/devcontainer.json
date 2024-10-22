@@ -1,0 +1,23 @@
+{
+    "name": "ghdl-sim",
+    "build": {"dockerfile": "Dockerfile",
+              "options": ["--tag=ghdl-sim-vscode:local"]},
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "vhdlwhiz.vhdl-by-vhdlwhiz",
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+          "aidanmedcalf.sby-config"
+        ]
+      }
+    },
+    "mounts": [{"source": "${localEnv:HOME}/Results",
+                "target": "/workspaces/results",
+                "type": "bind"}],
+    "remoteUser": "vscode",
+    "updateRemoteUserUID": true,
+    "runArgs": ["--rm"],
+    "postStartCommand": "nohup bash -c '/usr/local/share/gui.sh' >/dev/null 2>&1",
+    "appPort": 8085
+  }
