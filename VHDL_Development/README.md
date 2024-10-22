@@ -17,3 +17,5 @@ Alternatively there is script at `/usr/local/share/gui.sh` that will run the abo
 
 Then you can open your browser to 'localhost:8085' and see the GTKWave gui in the browser window.
 
+## Devcontiner
+Add the contents of this folder to a folder in your project called `.devcontainer`
