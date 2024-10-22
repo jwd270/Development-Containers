@@ -18,7 +18,7 @@
                 {"source": "${localEnv:HOME}/Models",
                  "target": "/workspaces/data",
                  "type": "bind"},
-                {"source": "${localEnv}/Results",
+                {"source": "${localEnv:HOME}/Results",
                  "target": "/workspaces/results",
                  "type": "bind"}],
     "remoteUser": "vscode",
